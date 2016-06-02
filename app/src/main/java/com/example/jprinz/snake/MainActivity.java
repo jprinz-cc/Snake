@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
 
         setContentView(snakeAnimView);
 
-        //i = new Intent(this, GameActivity.class);
+        i = new Intent(this, GameActivity.class);
 
     }
 
@@ -128,8 +128,7 @@ public class MainActivity extends Activity {
 
         public void controlFPS() {
             long timeThisFrame =
-                    (System.currentTimeMillis() -
-                            lastFrameTime);
+                    (System.currentTimeMillis() - lastFrameTime);
             long timeToSleep = 500 - timeThisFrame;
             if (timeThisFrame > 0) {
                 fps = (int) (1000 / timeThisFrame);
